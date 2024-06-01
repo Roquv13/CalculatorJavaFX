@@ -24,8 +24,13 @@ public class HelloApplication extends Application {
         grid.setPadding(new Insets(10, 10, 10, 10));
 
         TextField num1Field = new TextField();
+        GridPane.setConstraints(num1Field, 0, 0);
+
         TextField num2Field = new TextField();
+        GridPane.setConstraints(num2Field, 0, 1);
+
         Label resultLabel = new Label("Result:");
+        GridPane.setConstraints(resultLabel, 0, 2);
 
         grid.getChildren().addAll(num1Field, num2Field, resultLabel);
 
