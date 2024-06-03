@@ -44,7 +44,7 @@ public class HelloApplication extends Application {
         GridPane.setConstraints(resultLabel, 0, 2);
 
         Button addButton = new Button("+");
-        addButton.setOnAction(this::add);
+        addButton.setOnAction(e -> performOperation('+'));
         GridPane.setConstraints(addButton, 1, 0);
 
         grid.getChildren().addAll(num1Field, num2Field, resultLabel, addButton);
@@ -54,16 +54,24 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
-    public void add(ActionEvent actionEvent) {
+    private void performOperation(char operator) {
         String num1Text = num1Field.getText();
         String num2Text = num2Field.getText();
 
         double num1 = Double.parseDouble(num1Text);
         double num2 = Double.parseDouble(num2Text);
+
+        switch (operator) {
+            case '+':
+                add(num1, num2);
+            default:
+                break;
+        }
+    }
+
+    public void add(double num1, double num2) {
         double result = 0.0;
-
         result = num1 + num2;
-
         resultLabel.setText("Result: " + result);
     }
 }
