@@ -47,7 +47,11 @@ public class HelloApplication extends Application {
         addButton.setOnAction(e -> performOperation('+'));
         GridPane.setConstraints(addButton, 1, 0);
 
-        grid.getChildren().addAll(num1Field, num2Field, resultLabel, addButton);
+        Button subtractButton = new Button("-");
+        subtractButton.setOnAction(e -> performOperation('-'));
+        GridPane.setConstraints(subtractButton, 2, 0);
+
+        grid.getChildren().addAll(num1Field, num2Field, resultLabel, addButton, subtractButton);
 
         Scene scene = new Scene(grid, 400, 600);
         stage.setScene(scene);
