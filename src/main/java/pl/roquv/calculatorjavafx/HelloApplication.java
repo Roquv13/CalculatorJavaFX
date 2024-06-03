@@ -64,14 +64,22 @@ public class HelloApplication extends Application {
         switch (operator) {
             case '+':
                 add(num1, num2);
+            case '-':
+                subtract(num1, num2);
             default:
                 break;
         }
     }
 
-    public void add(double num1, double num2) {
+    private void add(double num1, double num2) {
         double result = 0.0;
         result = num1 + num2;
+        resultLabel.setText("Result: " + result);
+    }
+
+    private void subtract(double num1, double num2) {
+        double result = 0.0;
+        result = num1 - num2;
         resultLabel.setText("Result: " + result);
     }
 }
