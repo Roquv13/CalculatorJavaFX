@@ -86,4 +86,10 @@ public class HelloApplication extends Application {
         result = num1 - num2;
         resultLabel.setText("Result: " + result);
     }
+
+    private void divide(double num1, double num2) {
+        double result = 0.0;
+        result = num1 / num2;
+        resultLabel.setText("Result: " + result);
+    }
 }
