@@ -55,7 +55,11 @@ public class HelloApplication extends Application {
         subtractButton.setOnAction(e -> performOperation('*'));
         GridPane.setConstraints(multiply, 3, 0);
 
-        grid.getChildren().addAll(num1Field, num2Field, resultLabel, addButton, subtractButton, multiply);
+        Button divide = new Button("/");
+        subtractButton.setOnAction(e -> performOperation('/'));
+        GridPane.setConstraints(divide, 4, 0);
+
+        grid.getChildren().addAll(num1Field, num2Field, resultLabel, addButton, subtractButton, multiply, divide);
 
         Scene scene = new Scene(grid, 400, 600);
         stage.setScene(scene);
