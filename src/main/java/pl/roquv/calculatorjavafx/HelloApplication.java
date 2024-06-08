@@ -18,6 +18,7 @@ public class HelloApplication extends Application {
     private TextField num1Field;
     private TextField num2Field;
     private Label resultLabel;
+    private double result;
 
     public static void main(String[] args) {
         launch();
@@ -49,17 +50,17 @@ public class HelloApplication extends Application {
 
         Button subtractButton = new Button("-");
         subtractButton.setOnAction(e -> performOperation('-'));
-        GridPane.setConstraints(subtractButton, 2, 0);
+        GridPane.setConstraints(subtractButton, 1, 1);
 
-        Button multiply = new Button("*");
-        subtractButton.setOnAction(e -> performOperation('*'));
-        GridPane.setConstraints(multiply, 3, 0);
+        Button multiplyButton = new Button("*");
+        multiplyButton.setOnAction(e -> performOperation('*'));
+        GridPane.setConstraints(multiplyButton, 1, 2);
 
-        Button divide = new Button("/");
-        subtractButton.setOnAction(e -> performOperation('/'));
-        GridPane.setConstraints(divide, 4, 0);
+        Button divideButton = new Button("/");
+        divideButton.setOnAction(e -> performOperation('/'));
+        GridPane.setConstraints(divideButton, 1, 3);
 
-        grid.getChildren().addAll(num1Field, num2Field, resultLabel, addButton, subtractButton, multiply, divide);
+        grid.getChildren().addAll(num1Field, num2Field, resultLabel, addButton, subtractButton, multiplyButton, divideButton);
 
         Scene scene = new Scene(grid, 400, 600);
         stage.setScene(scene);
@@ -67,47 +68,33 @@ public class HelloApplication extends Application {
     }
 
     private void performOperation(char operator) {
-        String num1Text = num1Field.getText();
-        String num2Text = num2Field.getText();
-
-        double num1 = Double.parseDouble(num1Text);
-        double num2 = Double.parseDouble(num2Text);
+        double num1 = Double.parseDouble(num1Field.getText());
+        double num2 = Double.parseDouble(num2Field.getText());
+        result = 0.0;
 
         switch (operator) {
-            case '+':
-                add(num1, num2);
-            case '-':
-                subtract(num1, num2);
-            case '*':
-                multiply(num1, num2);
-            case '/':
-                divide(num1, num2);
-            default:
-                break;
+            case '+' -> add(num1, num2);
+            case '-' -> subtract(num1, num2);
+            case '*' -> multiply(num1, num2);
+            case '/' -> divide(num1, num2);
         }
+
+        resultLabel.setText("Result: " + result);
     }
 
     private void add(double num1, double num2) {
-        double result = 0.0;
         result = num1 + num2;
-        resultLabel.setText("Result: " + result);
     }
 
     private void subtract(double num1, double num2) {
-        double result = 0.0;
         result = num1 - num2;
-        resultLabel.setText("Result: " + result);
     }
 
     private void multiply(double num1, double num2) {
-        double result = 0.0;
         result = num1 * num2;
-        resultLabel.setText("Result: " + result);
     }
 
     private void divide(double num1, double num2) {
-        double result = 0.0;
         result = num1 / num2;
-        resultLabel.setText("Result: " + result);
     }
 }
