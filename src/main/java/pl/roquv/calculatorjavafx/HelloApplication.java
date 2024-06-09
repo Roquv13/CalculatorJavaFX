@@ -19,6 +19,10 @@ public class HelloApplication extends Application {
     private TextField num2Field;
     private Label resultLabel;
     private double result;
+    private Button addButton;
+    private Button subtractButton;
+    private Button multiplyButton;
+    private Button divideButton;
 
     public static void main(String[] args) {
         launch();
@@ -44,20 +48,11 @@ public class HelloApplication extends Application {
         resultLabel = new Label("Result:");
         GridPane.setConstraints(resultLabel, 0, 2);
 
-        Button addButton = new Button("+");
-        addButton.setOnAction(e -> performOperation('+'));
+        setButtons();
+
         GridPane.setConstraints(addButton, 1, 0);
-
-        Button subtractButton = new Button("-");
-        subtractButton.setOnAction(e -> performOperation('-'));
         GridPane.setConstraints(subtractButton, 1, 1);
-
-        Button multiplyButton = new Button("*");
-        multiplyButton.setOnAction(e -> performOperation('*'));
         GridPane.setConstraints(multiplyButton, 1, 2);
-
-        Button divideButton = new Button("/");
-        divideButton.setOnAction(e -> performOperation('/'));
         GridPane.setConstraints(divideButton, 1, 3);
 
         grid.getChildren().addAll(num1Field, num2Field, resultLabel, addButton, subtractButton, multiplyButton, divideButton);
@@ -67,9 +62,23 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
+    private void setButtons() {
+        addButton = new Button("+");
+        addButton.setOnAction(e -> performOperation('+'));
+
+        subtractButton = new Button("-");
+        subtractButton.setOnAction(e -> performOperation('-'));
+
+        multiplyButton = new Button("*");
+        multiplyButton.setOnAction(e -> performOperation('*'));
+
+        divideButton = new Button("/");
+        divideButton.setOnAction(e -> performOperation('/'));
+    }
+
     private void performOperation(char operator) {
-        double num1 = Double.parseDouble(num1Field.getText());
-        double num2 = Double.parseDouble(num2Field.getText());
+        double num1 = parseDoubleNum(num1Field.getText());
+        double num2 = parseDoubleNum(num2Field.getText());
         result = 0.0;
 
         switch (operator) {
@@ -80,6 +89,10 @@ public class HelloApplication extends Application {
         }
 
         resultLabel.setText("Result: " + result);
+    }
+
+    private double parseDoubleNum(String numText) {
+        return Double.parseDouble(numText);
     }
 
     private void add(double num1, double num2) {
