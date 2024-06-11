@@ -21,6 +21,7 @@ public class CalculatorApplication extends Application {
     private Button subtractButton;
     private Button multiplyButton;
     private Button divideButton;
+    private GridPane grid;
 
     public static void main(String[] args) {
         launch();
@@ -30,27 +31,15 @@ public class CalculatorApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(CalculatorApplication.class.getResource("hello-view.fxml"));
 //        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
-        stage.setTitle("JavaFX Calculator");
 
         setTextFields();
         setLabels();
         setButtons();
-
-        GridPane grid = new GridPane();
-        grid.setHgap(10);
-        grid.setVgap(10);
-        grid.setPadding(new Insets(10, 10, 10, 10));
-        GridPane.setConstraints(num1Field, 0, 0);
-        GridPane.setConstraints(num2Field, 0, 1);
-        GridPane.setConstraints(resultLabel, 0, 2);
-        GridPane.setConstraints(addButton, 1, 0);
-        GridPane.setConstraints(subtractButton, 1, 1);
-        GridPane.setConstraints(multiplyButton, 1, 2);
-        GridPane.setConstraints(divideButton, 1, 3);
-
-        grid.getChildren().addAll(num1Field, num2Field, resultLabel, addButton, subtractButton, multiplyButton, divideButton);
+        setGrid();
 
         Scene scene = new Scene(grid, 400, 600);
+
+        stage.setTitle("JavaFX Calculator");
         stage.setScene(scene);
         stage.show();
     }
@@ -76,6 +65,23 @@ public class CalculatorApplication extends Application {
 
         divideButton = new Button("/");
         divideButton.setOnAction(e -> performOperation('/'));
+    }
+
+    private void setGrid() {
+        grid = new GridPane();
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(10, 10, 10, 10));
+
+        GridPane.setConstraints(num1Field, 0, 0);
+        GridPane.setConstraints(num2Field, 0, 1);
+        GridPane.setConstraints(resultLabel, 0, 2);
+        GridPane.setConstraints(addButton, 1, 0);
+        GridPane.setConstraints(subtractButton, 1, 1);
+        GridPane.setConstraints(multiplyButton, 1, 2);
+        GridPane.setConstraints(divideButton, 1, 3);
+
+        grid.getChildren().addAll(num1Field, num2Field, resultLabel, addButton, subtractButton, multiplyButton, divideButton);
     }
 
     private void performOperation(char operator) {
