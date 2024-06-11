@@ -32,22 +32,17 @@ public class CalculatorApplication extends Application {
 //        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
         stage.setTitle("JavaFX Calculator");
 
+        setTextFields();
+        setLabels();
+        setButtons();
+
         GridPane grid = new GridPane();
         grid.setHgap(10);
         grid.setVgap(10);
         grid.setPadding(new Insets(10, 10, 10, 10));
-
-        num1Field = new TextField();
         GridPane.setConstraints(num1Field, 0, 0);
-
-        num2Field = new TextField();
         GridPane.setConstraints(num2Field, 0, 1);
-
-        resultLabel = new Label("Result:");
         GridPane.setConstraints(resultLabel, 0, 2);
-
-        setButtons();
-
         GridPane.setConstraints(addButton, 1, 0);
         GridPane.setConstraints(subtractButton, 1, 1);
         GridPane.setConstraints(multiplyButton, 1, 2);
@@ -58,6 +53,15 @@ public class CalculatorApplication extends Application {
         Scene scene = new Scene(grid, 400, 600);
         stage.setScene(scene);
         stage.show();
+    }
+
+    private void setTextFields() {
+        num1Field = new TextField();
+        num2Field = new TextField();
+    }
+
+    private void setLabels() {
+        resultLabel = new Label("Result:");
     }
 
     private void setButtons() {
