@@ -66,40 +66,21 @@ public class CalculatorApplication extends Application {
     }
 
     private void setButtons() {
-        button1 = new Button("1");
-        button1.setPrefWidth(87.5);
-        button1.setPrefHeight(87.5);
-        button1.setOnAction(e -> performOperation('+'));
+        button1 = createButton("1", 87.5, 87.5, '1');
+        button2 = createButton("2", 87.5, 87.5, '2');
+        button3 = createButton("3", 87.5, 87.5, '3');
+        addButton = createButton("+", 87.5, 87.5, '+');
+        subtractButton = createButton("-", 87.5, 87.5, '-');
+        multiplyButton = createButton("*", 87.5, 87.5, '*');
+        divideButton = createButton("/", 87.5, 87.5, '/');
+    }
 
-        button2 = new Button("2");
-        button2.setPrefWidth(87.5);
-        button2.setPrefHeight(87.5);
-        button2.setOnAction(e -> performOperation('+'));
-
-        button3 = new Button("3");
-        button3.setPrefWidth(87.5);
-        button3.setPrefHeight(87.5);
-        button3.setOnAction(e -> performOperation('+'));
-
-        addButton = new Button("+");
-        addButton.setPrefWidth(87.5);
-        addButton.setPrefHeight(87.5);
-        addButton.setOnAction(e -> performOperation('+'));
-
-        subtractButton = new Button("-");
-        subtractButton.setPrefWidth(87.5);
-        subtractButton.setPrefHeight(87.5);
-        subtractButton.setOnAction(e -> performOperation('-'));
-
-        multiplyButton = new Button("*");
-        multiplyButton.setPrefWidth(87.5);
-        multiplyButton.setPrefHeight(87.5);
-        multiplyButton.setOnAction(e -> performOperation('*'));
-
-        divideButton = new Button("/");
-        divideButton.setPrefWidth(87.5);
-        divideButton.setPrefHeight(87.5);
-        divideButton.setOnAction(e -> performOperation('/'));
+    private Button createButton(String text, double width, double height, char action) {
+        Button button = new Button(text);
+        button.setPrefWidth(width);
+        button.setPrefHeight(height);
+        button.setOnAction(e -> performOperation(action));
+        return button;
     }
 
     private void setGrid() {
