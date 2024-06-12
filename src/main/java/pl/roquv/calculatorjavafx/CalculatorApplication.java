@@ -6,6 +6,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -16,6 +17,7 @@ public class CalculatorApplication extends Application {
     private TextField num1Field;
     private TextField num2Field;
     private Label resultLabel;
+    private TextArea resultArea;
     private double result;
     private Button addButton;
     private Button subtractButton;
@@ -33,7 +35,7 @@ public class CalculatorApplication extends Application {
 //        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
 
         setTextFields();
-        setLabels();
+        setTextAreas();
         setButtons();
         setGrid();
 
@@ -49,8 +51,9 @@ public class CalculatorApplication extends Application {
         num2Field = new TextField();
     }
 
-    private void setLabels() {
-        resultLabel = new Label("Result:");
+    private void setTextAreas() {
+        resultArea = new TextArea();
+        resultArea.setPrefSize(400, 50);
     }
 
     private void setButtons() {
@@ -75,13 +78,13 @@ public class CalculatorApplication extends Application {
 
         GridPane.setConstraints(num1Field, 0, 0);
         GridPane.setConstraints(num2Field, 0, 1);
-        GridPane.setConstraints(resultLabel, 0, 2);
+        GridPane.setConstraints(resultArea, 0, 2);
         GridPane.setConstraints(addButton, 1, 0);
         GridPane.setConstraints(subtractButton, 1, 1);
         GridPane.setConstraints(multiplyButton, 1, 2);
         GridPane.setConstraints(divideButton, 1, 3);
 
-        grid.getChildren().addAll(num1Field, num2Field, resultLabel, addButton, subtractButton, multiplyButton, divideButton);
+        grid.getChildren().addAll(num1Field, num2Field, resultArea, addButton, subtractButton, multiplyButton, divideButton);
     }
 
     private void performOperation(char operator) {
@@ -96,7 +99,7 @@ public class CalculatorApplication extends Application {
             case '/' -> divide(num1, num2);
         }
 
-        resultLabel.setText("Result: " + result);
+        resultArea.setText("Result: " + result);
     }
 
     private double parseDoubleNum(String numText) {
