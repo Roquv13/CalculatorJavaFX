@@ -16,7 +16,6 @@ import java.io.IOException;
 public class CalculatorApplication extends Application {
     private TextField num1Field;
     private TextField num2Field;
-    private Label resultLabel;
     private TextArea resultArea;
     private double result;
     private Button addButton;
@@ -34,8 +33,8 @@ public class CalculatorApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(CalculatorApplication.class.getResource("hello-view.fxml"));
 //        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
 
-        setTextFields();
-        setTextAreas();
+        setResultArea();
+        setInputFields();
         setButtons();
         setGrid();
 
@@ -46,14 +45,20 @@ public class CalculatorApplication extends Application {
         stage.show();
     }
 
-    private void setTextFields() {
-        num1Field = new TextField();
-        num2Field = new TextField();
+    private void setResultArea() {
+        resultArea = new TextArea();
+        resultArea.setMinWidth(380);
+        resultArea.setMaxHeight(80);
     }
 
-    private void setTextAreas() {
-        resultArea = new TextArea();
-        resultArea.setPrefSize(400, 50);
+    private void setInputFields() {
+        num1Field = new TextField();
+        num1Field.setMinWidth(380);
+        num1Field.setMaxHeight(40);
+
+        num2Field = new TextField();
+        num2Field.setMinWidth(380);
+        num2Field.setMaxHeight(40);
     }
 
     private void setButtons() {
@@ -76,13 +81,13 @@ public class CalculatorApplication extends Application {
         grid.setVgap(10);
         grid.setPadding(new Insets(10, 10, 10, 10));
 
-        GridPane.setConstraints(num1Field, 0, 0);
-        GridPane.setConstraints(num2Field, 0, 1);
-        GridPane.setConstraints(resultArea, 0, 2);
-        GridPane.setConstraints(addButton, 1, 0);
-        GridPane.setConstraints(subtractButton, 1, 1);
-        GridPane.setConstraints(multiplyButton, 1, 2);
-        GridPane.setConstraints(divideButton, 1, 3);
+        GridPane.setConstraints(resultArea, 0, 0);
+        GridPane.setConstraints(num1Field, 0, 1);
+        GridPane.setConstraints(num2Field, 0, 2);
+        GridPane.setConstraints(addButton, 0, 3);
+        GridPane.setConstraints(subtractButton, 1, 3);
+        GridPane.setConstraints(multiplyButton, 2, 3);
+        GridPane.setConstraints(divideButton, 3, 3);
 
         grid.getChildren().addAll(num1Field, num2Field, resultArea, addButton, subtractButton, multiplyButton, divideButton);
     }
@@ -99,7 +104,7 @@ public class CalculatorApplication extends Application {
             case '/' -> divide(num1, num2);
         }
 
-        resultArea.setText("Result: " + result);
+        resultArea.setText(String.valueOf(result));
     }
 
     private double parseDoubleNum(String numText) {
