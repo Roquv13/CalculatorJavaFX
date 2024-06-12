@@ -18,11 +18,18 @@ public class CalculatorApplication extends Application {
     private TextArea resultArea;
     private double result;
 
+    private Button button0;
     private Button button1;
     private Button button2;
     private Button button3;
-    private Button addButton;
+    private Button button4;
+    private Button button5;
+    private Button button6;
+    private Button button7;
+    private Button button8;
+    private Button button9;
 
+    private Button addButton;
     private Button subtractButton;
     private Button multiplyButton;
     private Button divideButton;
@@ -66,9 +73,16 @@ public class CalculatorApplication extends Application {
     }
 
     private void setButtons() {
+        button0 = createButton("0", 87.5, 87.5, '0');
         button1 = createButton("1", 87.5, 87.5, '1');
         button2 = createButton("2", 87.5, 87.5, '2');
         button3 = createButton("3", 87.5, 87.5, '3');
+        button4 = createButton("4", 87.5, 87.5, '4');
+        button5 = createButton("5", 87.5, 87.5, '5');
+        button6 = createButton("6", 87.5, 87.5, '6');
+        button7 = createButton("7", 87.5, 87.5, '7');
+        button8 = createButton("8", 87.5, 87.5, '8');
+        button9 = createButton("9", 87.5, 87.5, '9');
         addButton = createButton("+", 87.5, 87.5, '+');
         subtractButton = createButton("-", 87.5, 87.5, '-');
         multiplyButton = createButton("*", 87.5, 87.5, '*');
@@ -112,15 +126,28 @@ public class CalculatorApplication extends Application {
         GridPane.setConstraints(addButton, 3, 0);
 
         // Row 2
+        GridPane.setConstraints(button4, 0, 1);
+        GridPane.setConstraints(button5, 1, 1);
+        GridPane.setConstraints(button6, 2, 1);
         GridPane.setConstraints(subtractButton, 3, 1);
 
         // Row 3
+        GridPane.setConstraints(button7, 0, 2);
+        GridPane.setConstraints(button8, 1, 2);
+        GridPane.setConstraints(button9, 2, 2);
         GridPane.setConstraints(multiplyButton, 3, 2);
 
         // Row 4
+        //GridPane.setConstraints(button0, 0, 3);
         GridPane.setConstraints(divideButton, 3, 3);
 
-        buttonsGrid.getChildren().addAll(button1, button2, button3, addButton, subtractButton, multiplyButton, divideButton);
+        buttonsGrid.getChildren().addAll(
+                button1, button2, button3,
+                button4, button5, button6,
+                button7, button8, button9,
+                addButton, subtractButton, 
+                multiplyButton, divideButton
+        );
         return buttonsGrid;
     }
 
