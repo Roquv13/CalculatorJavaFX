@@ -122,28 +122,28 @@ public class CalculatorApplication extends Application {
         buttonsGrid.setPadding(new Insets(10));
 
         // Row 1
-        GridPane.setConstraints(button1, 0, 0);
-        GridPane.setConstraints(button2, 1, 0);
-        GridPane.setConstraints(button3, 2, 0);
         GridPane.setConstraints(addButton, 3, 0);
 
         // Row 2
-        GridPane.setConstraints(button4, 0, 1);
-        GridPane.setConstraints(button5, 1, 1);
-        GridPane.setConstraints(button6, 2, 1);
+        GridPane.setConstraints(button1, 0, 1);
+        GridPane.setConstraints(button2, 1, 1);
+        GridPane.setConstraints(button3, 2, 1);
         GridPane.setConstraints(subtractButton, 3, 1);
 
         // Row 3
-        GridPane.setConstraints(button7, 0, 2);
-        GridPane.setConstraints(button8, 1, 2);
-        GridPane.setConstraints(button9, 2, 2);
+        GridPane.setConstraints(button4, 0, 2);
+        GridPane.setConstraints(button5, 1, 2);
+        GridPane.setConstraints(button6, 2, 2);
         GridPane.setConstraints(multiplyButton, 3, 2);
 
         // Row 4
-        //GridPane.setConstraints(button0, 0, 3);
+        GridPane.setConstraints(button7, 0, 3);
+        GridPane.setConstraints(button8, 1, 3);
+        GridPane.setConstraints(button9, 2, 3);
         GridPane.setConstraints(divideButton, 3, 3);
 
         // Row 5
+        GridPane.setConstraints(button0, 1, 4);
         GridPane.setConstraints(equalButton, 3, 4);
 
         buttonsGrid.getChildren().addAll(
@@ -152,7 +152,7 @@ public class CalculatorApplication extends Application {
                 button7, button8, button9,
                 addButton, subtractButton, 
                 multiplyButton, divideButton,
-                equalButton
+                button0, equalButton
         );
         return buttonsGrid;
     }
