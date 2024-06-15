@@ -34,6 +34,7 @@ public class CalculatorApplication extends Application {
     private Button multiplyButton;
     private Button divideButton;
     private Button equalButton;
+    private Button dotButton;
     private GridPane grid;
 
     public static void main(String[] args) {
@@ -89,6 +90,7 @@ public class CalculatorApplication extends Application {
         multiplyButton = createButton("*", 87.5, 87.5, '*');
         divideButton = createButton("/", 87.5, 87.5, '/');
         equalButton = createButton("=", 87.5, 87.5, '=');
+        dotButton = createButton(".", 87.5, 87.5, '.');
     }
 
     private Button createButton(String text, double width, double height, char action) {
@@ -144,6 +146,7 @@ public class CalculatorApplication extends Application {
 
         // Row 5
         GridPane.setConstraints(button0, 1, 4);
+        GridPane.setConstraints(dotButton, 2, 4);
         GridPane.setConstraints(equalButton, 3, 4);
 
         buttonsGrid.getChildren().addAll(
@@ -152,7 +155,7 @@ public class CalculatorApplication extends Application {
                 button7, button8, button9,
                 addButton, subtractButton, 
                 multiplyButton, divideButton,
-                button0, equalButton
+                button0, dotButton, equalButton
         );
         return buttonsGrid;
     }
