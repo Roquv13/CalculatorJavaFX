@@ -150,11 +150,10 @@ public class CalculatorApplication extends Application {
         GridPane.setConstraints(equalButton, 3, 4);
 
         buttonsGrid.getChildren().addAll(
-                button1, button2, button3,
-                button4, button5, button6,
-                button7, button8, button9,
-                addButton, subtractButton, 
-                multiplyButton, divideButton,
+                addButton,
+                button1, button2, button3, subtractButton,
+                button4, button5, button6, multiplyButton,
+                button7, button8, button9, divideButton,
                 button0, dotButton, equalButton
         );
         return buttonsGrid;
