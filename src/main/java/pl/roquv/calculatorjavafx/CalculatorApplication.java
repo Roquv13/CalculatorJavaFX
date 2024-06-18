@@ -37,6 +37,7 @@ public class CalculatorApplication extends Application {
     private Button dotButton;
     private Button clearButton;
     private Button backButton;
+    private Button reverseSignButton;
     private GridPane grid;
 
     public static void main(String[] args) {
@@ -77,27 +78,28 @@ public class CalculatorApplication extends Application {
     }
 
     private void setButtons() {
-        button0 = createButton("0", 87.5, 87.5, '0');
-        button1 = createButton("1", 87.5, 87.5, '1');
-        button2 = createButton("2", 87.5, 87.5, '2');
-        button3 = createButton("3", 87.5, 87.5, '3');
-        button4 = createButton("4", 87.5, 87.5, '4');
-        button5 = createButton("5", 87.5, 87.5, '5');
-        button6 = createButton("6", 87.5, 87.5, '6');
-        button7 = createButton("7", 87.5, 87.5, '7');
-        button8 = createButton("8", 87.5, 87.5, '8');
-        button9 = createButton("9", 87.5, 87.5, '9');
-        addButton = createButton("+", 87.5, 87.5, '+');
-        subtractButton = createButton("-", 87.5, 87.5, '-');
-        multiplyButton = createButton("*", 87.5, 87.5, '*');
-        divideButton = createButton("/", 87.5, 87.5, '/');
-        equalButton = createButton("=", 87.5, 87.5, '=');
-        dotButton = createButton(".", 87.5, 87.5, '.');
-        clearButton = createButton("C", 87.5, 87.5, 'C');
-        backButton = createButton("<-", 87.5, 87.5, 'B');
+        button0 = createButton("0", 87.5, 87.5, "0");
+        button1 = createButton("1", 87.5, 87.5, "1");
+        button2 = createButton("2", 87.5, 87.5, "2");
+        button3 = createButton("3", 87.5, 87.5, "3");
+        button4 = createButton("4", 87.5, 87.5, "4");
+        button5 = createButton("5", 87.5, 87.5, "5");
+        button6 = createButton("6", 87.5, 87.5, "6");
+        button7 = createButton("7", 87.5, 87.5, "7");
+        button8 = createButton("8", 87.5, 87.5, "8");
+        button9 = createButton("9", 87.5, 87.5, "9");
+        addButton = createButton("+", 87.5, 87.5, "+");
+        subtractButton = createButton("-", 87.5, 87.5, "-");
+        multiplyButton = createButton("*", 87.5, 87.5, "*");
+        divideButton = createButton("/", 87.5, 87.5, "/");
+        equalButton = createButton("=", 87.5, 87.5, "=");
+        dotButton = createButton(".", 87.5, 87.5, ".");
+        clearButton = createButton("C", 87.5, 87.5, "Clear");
+        backButton = createButton("<-", 87.5, 87.5, "Back");
+        reverseSignButton = createButton("+/-", 87.5, 87.5, "Reverse");
     }
 
-    private Button createButton(String text, double width, double height, char action) {
+    private Button createButton(String text, double width, double height, String action) {
         Button button = new Button(text);
         button.setPrefWidth(width);
         button.setPrefHeight(height);
@@ -129,7 +131,7 @@ public class CalculatorApplication extends Application {
 
         // Row 1
         GridPane.setConstraints(clearButton, 0, 0);
-
+        GridPane.setConstraints(reverseSignButton, 1, 0);
         GridPane.setConstraints(backButton, 2, 0);
         GridPane.setConstraints(addButton, 3, 0);
 
@@ -157,7 +159,7 @@ public class CalculatorApplication extends Application {
         GridPane.setConstraints(equalButton, 3, 4);
 
         buttonsGrid.getChildren().addAll(
-                clearButton, backButton, addButton,
+                clearButton, reverseSignButton, backButton, addButton,
                 button1, button2, button3, subtractButton,
                 button4, button5, button6, multiplyButton,
                 button7, button8, button9, divideButton,
@@ -166,16 +168,16 @@ public class CalculatorApplication extends Application {
         return buttonsGrid;
     }
 
-    private void performOperation(char operator) {
+    private void performOperation(String operator) {
         double num1 = parseDoubleNum(num1Field.getText());
         double num2 = parseDoubleNum(num2Field.getText());
         result = 0.0;
 
         switch (operator) {
-            case '+' -> add(num1, num2);
-            case '-' -> subtract(num1, num2);
-            case '*' -> multiply(num1, num2);
-            case '/' -> divide(num1, num2);
+            case "+" -> add(num1, num2);
+            case "-" -> subtract(num1, num2);
+            case "*" -> multiply(num1, num2);
+            case "/" -> divide(num1, num2);
         }
 
         resultArea.setText(String.valueOf(result));
