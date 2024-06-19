@@ -14,9 +14,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class CalculatorApplication extends Application {
-    private TextField num1Field;
-    private TextField num2Field;
     private TextArea resultArea;
+    private String firstNum = "";
+    private String secondNum = "";
+    private String operator = "";
     private double result;
 
     private Button button0;
@@ -154,6 +155,17 @@ public class CalculatorApplication extends Application {
                 button0, dotButton, equalButton
         );
         return buttonsGrid;
+    }
+
+    private void handleButtonClick(String action) {
+        switch (action) {
+            case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "." -> System.out.println("append number");
+            case "+", "-", "*", "/" -> System.out.println("set operator");
+            case "=" -> System.out.println("calculateResult");
+            case "Clear" -> System.out.println("clear result");
+            case "Back" -> System.out.println("backspace");
+            case "Reverse" -> System.out.println("reverse sign");
+        }
     }
 
     private void performOperation(String operator) {
