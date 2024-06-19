@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.shape.Shape;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -50,7 +51,6 @@ public class CalculatorApplication extends Application {
 //        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
 
         setResultArea();
-        setInputFields();
         setButtons();
         setGrid();
 
@@ -63,18 +63,8 @@ public class CalculatorApplication extends Application {
 
     private void setResultArea() {
         resultArea = new TextArea();
-        resultArea.setMinWidth(380);
+        resultArea.setMaxWidth(380);
         resultArea.setMaxHeight(80);
-    }
-
-    private void setInputFields() {
-        num1Field = new TextField();
-        num1Field.setMinWidth(380);
-        num1Field.setMaxHeight(40);
-
-        num2Field = new TextField();
-        num2Field.setMinWidth(380);
-        num2Field.setMaxHeight(40);
     }
 
     private void setButtons() {
@@ -114,13 +104,11 @@ public class CalculatorApplication extends Application {
         grid.setPadding(new Insets(10));
 
         GridPane.setConstraints(resultArea, 0, 0);
-        GridPane.setConstraints(num1Field, 0, 1);
-        GridPane.setConstraints(num2Field, 0, 2);
 
         GridPane buttonsGrid = buttonsGridPane();
-        GridPane.setConstraints(buttonsGrid, 0, 3);
+        GridPane.setConstraints(buttonsGrid, 0, 1);
 
-        grid.getChildren().addAll(num1Field, num2Field, resultArea, buttonsGrid);
+        grid.getChildren().addAll(resultArea, buttonsGrid);
     }
 
     private GridPane buttonsGridPane() {
@@ -169,8 +157,8 @@ public class CalculatorApplication extends Application {
     }
 
     private void performOperation(String operator) {
-        double num1 = parseDoubleNum(num1Field.getText());
-        double num2 = parseDoubleNum(num2Field.getText());
+        double num1 = parseDoubleNum(resultArea.getText());
+        double num2 = parseDoubleNum(resultArea.getText());
         result = 0.0;
 
         switch (operator) {
