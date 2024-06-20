@@ -94,7 +94,7 @@ public class CalculatorApplication extends Application {
         Button button = new Button(text);
         button.setPrefWidth(width);
         button.setPrefHeight(height);
-        button.setOnAction(e -> performOperation(action));
+        button.setOnAction(e -> handleButtonClick(action));
         return button;
     }
 
