@@ -6,18 +6,17 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.scene.shape.Shape;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class CalculatorApplication extends Application {
     private TextArea resultArea;
-    private String firstNum = "";
-    private String secondNum = "";
+    private String input = "";
+    private String previousInput = "";
     private String operator = "";
+    private boolean startNewInput = true;
     private double result;
 
     private Button button0;
@@ -159,13 +158,23 @@ public class CalculatorApplication extends Application {
 
     private void handleButtonClick(String action) {
         switch (action) {
-            case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "." -> System.out.println("append number");
+            case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "." -> appendNumber(action);
             case "+", "-", "*", "/" -> System.out.println("set operator");
             case "=" -> System.out.println("calculateResult");
             case "Clear" -> System.out.println("clear result");
             case "Back" -> System.out.println("backspace");
             case "Reverse" -> System.out.println("reverse sign");
         }
+    }
+
+    private void appendNumber(String number) {
+        if (startNewInput) {
+            input = number.equals(".") ? "0." : number;
+            startNewInput = false;
+        } else {
+            input += number;
+        }
+        resultArea.setText(input);
     }
 
     private void performOperation(String operator) {
