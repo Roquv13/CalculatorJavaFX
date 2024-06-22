@@ -159,7 +159,7 @@ public class CalculatorApplication extends Application {
     private void handleButtonClick(String action) {
         switch (action) {
             case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "." -> appendNumber(action);
-            case "+", "-", "*", "/" -> System.out.println("set operator");
+            case "+", "-", "*", "/" -> setOperator(action);
             case "=" -> System.out.println("calculateResult");
             case "Clear" -> System.out.println("clear result");
             case "Back" -> System.out.println("backspace");
@@ -175,6 +175,15 @@ public class CalculatorApplication extends Application {
             input += number;
         }
         resultArea.setText(input);
+    }
+
+    private void setOperator(String op) {
+        if (!input.isEmpty()) {
+            previousInput = input;
+            input = "";
+            operator = op;
+            startNewInput = true;
+        }
     }
 
     private void performOperation(String operator) {
