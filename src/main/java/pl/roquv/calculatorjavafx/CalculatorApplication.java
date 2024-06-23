@@ -186,6 +186,21 @@ public class CalculatorApplication extends Application {
         }
     }
 
+    private void calculateResult() {
+        if (!previousInput.isEmpty() && !input.isEmpty() && !operator.isEmpty()) {
+            double number1 = Double.parseDouble(previousInput);
+            double number2 = Double.parseDouble(input);
+            double result = 0.0;
+
+            switch (operator) {
+                case "+" -> result = number1 + number2;
+                case "-" -> result = number1 - number2;
+                case "*" -> result = number1 * number2;
+                case "/" -> result = number2 != 0 ? number1 / number2 : 0;
+            }
+        }
+    }
+
     private void performOperation(String operator) {
         double num1 = parseDoubleNum(resultArea.getText());
         double num2 = parseDoubleNum(resultArea.getText());
