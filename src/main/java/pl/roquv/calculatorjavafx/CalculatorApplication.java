@@ -160,7 +160,7 @@ public class CalculatorApplication extends Application {
         switch (action) {
             case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "." -> appendNumber(action);
             case "+", "-", "*", "/" -> setOperator(action);
-            case "=" -> System.out.println("calculateResult");
+            case "=" -> calculateResult();
             case "Clear" -> System.out.println("clear result");
             case "Back" -> System.out.println("backspace");
             case "Reverse" -> System.out.println("reverse sign");
@@ -198,6 +198,12 @@ public class CalculatorApplication extends Application {
                 case "*" -> result = number1 * number2;
                 case "/" -> result = number2 != 0 ? number1 / number2 : 0;
             }
+
+            resultArea.setText(String.valueOf(result));
+            input = String.valueOf(result);
+            previousInput = "";
+            operator = "";
+            startNewInput = true;
         }
     }
 
