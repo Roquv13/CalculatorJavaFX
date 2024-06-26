@@ -163,7 +163,7 @@ public class CalculatorApplication extends Application {
             case "=" -> calculateResult();
             case "Clear" -> clearResult();
             case "Back" -> backspace();
-            case "Reverse" -> System.out.println("reverse sign");
+            case "Reverse" -> reverseSign();
         }
     }
 
@@ -220,6 +220,14 @@ public class CalculatorApplication extends Application {
         operator = "";
         resultArea.setText("");
         startNewInput = true;
+    }
+
+    private void reverseSign() {
+        if (!input.isEmpty()) {
+            double value = Double.parseDouble(input) * -1;
+            input = String.valueOf(value);
+            resultArea.setText(input);
+        }
     }
 
     private void performOperation(String operator) {
