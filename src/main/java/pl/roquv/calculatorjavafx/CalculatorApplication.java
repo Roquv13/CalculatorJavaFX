@@ -162,7 +162,7 @@ public class CalculatorApplication extends Application {
             case "+", "-", "*", "/" -> setOperator(action);
             case "=" -> calculateResult();
             case "Clear" -> clearResult();
-            case "Back" -> System.out.println("backspace");
+            case "Back" -> backspace();
             case "Reverse" -> System.out.println("reverse sign");
         }
     }
@@ -204,6 +204,13 @@ public class CalculatorApplication extends Application {
             previousInput = "";
             operator = "";
             startNewInput = true;
+        }
+    }
+
+    private void backspace() {
+        if (!input.isEmpty()) {
+            input = input.substring(0, input.length() - 1);
+            resultArea.setText(input);
         }
     }
 
