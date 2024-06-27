@@ -201,8 +201,6 @@ public class CalculatorApplication extends Application {
 
             resultArea.setText(String.valueOf(result));
             input = String.valueOf(result);
-            previousInput = "";
-            operator = "";
             startNewInput = true;
         }
     }
@@ -230,38 +228,38 @@ public class CalculatorApplication extends Application {
         }
     }
 
-    private void performOperation(String operator) {
-        double num1 = parseDoubleNum(resultArea.getText());
-        double num2 = parseDoubleNum(resultArea.getText());
-        result = 0.0;
-
-        switch (operator) {
-            case "+" -> add(num1, num2);
-            case "-" -> subtract(num1, num2);
-            case "*" -> multiply(num1, num2);
-            case "/" -> divide(num1, num2);
-        }
-
-        resultArea.setText(String.valueOf(result));
-    }
-
-    private double parseDoubleNum(String numText) {
-        return Double.parseDouble(numText);
-    }
-
-    private void add(double num1, double num2) {
-        result = num1 + num2;
-    }
-
-    private void subtract(double num1, double num2) {
-        result = num1 - num2;
-    }
-
-    private void multiply(double num1, double num2) {
-        result = num1 * num2;
-    }
-
-    private void divide(double num1, double num2) {
-        result = num1 / num2;
-    }
+//    private void performOperation(String operator) {
+//        double num1 = parseDoubleNum(resultArea.getText());
+//        double num2 = parseDoubleNum(resultArea.getText());
+//        result = 0.0;
+//
+//        switch (operator) {
+//            case "+" -> add(num1, num2);
+//            case "-" -> subtract(num1, num2);
+//            case "*" -> multiply(num1, num2);
+//            case "/" -> divide(num1, num2);
+//        }
+//
+//        resultArea.setText(String.valueOf(result));
+//    }
+//
+//    private double parseDoubleNum(String numText) {
+//        return Double.parseDouble(numText);
+//    }
+//
+//    private void add(double num1, double num2) {
+//        result = num1 + num2;
+//    }
+//
+//    private void subtract(double num1, double num2) {
+//        result = num1 - num2;
+//    }
+//
+//    private void multiply(double num1, double num2) {
+//        result = num1 * num2;
+//    }
+//
+//    private void divide(double num1, double num2) {
+//        result = num1 / num2;
+//    }
 }
