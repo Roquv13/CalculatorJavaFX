@@ -3,7 +3,7 @@ package pl.roquv.calculatorjavafx;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class CalculatorController {
+public class Controller {
     @FXML
     private Label welcomeText;
 
