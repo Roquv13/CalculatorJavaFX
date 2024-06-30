@@ -3,7 +3,10 @@ package pl.roquv.calculatorjavafx;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
+import java.io.File;
 
 public class Main extends Application {
 
@@ -13,6 +16,11 @@ public class Main extends Application {
 
         stage.setTitle("Calculator");
         stage.setScene(new Scene(root.load(), 450, 600));
+
+        // Load icon
+        String iconPath = Main.class.getResource("icon.png").toExternalForm();
+        stage.getIcons().add(new Image(iconPath));
+
         stage.show();
     }
 
