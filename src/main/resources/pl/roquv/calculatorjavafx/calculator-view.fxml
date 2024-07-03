@@ -12,4 +12,8 @@
   <!--Calculation Sequence Label-->
   <Label fx:id="calculationSequenceLabel"
          AnchorPane.topAnchor="40" AnchorPane.leftAnchor="10"/>
+
+  <!--Output Label -->
+  <Label fx:id="outputLabel" text="0"
+         AnchorPane.topAnchor="90" AnchorPane.leftAnchor="10"
 </AnchorPane>
