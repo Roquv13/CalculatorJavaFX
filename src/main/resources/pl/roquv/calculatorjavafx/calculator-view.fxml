@@ -13,7 +13,14 @@
   <Label fx:id="calculationSequenceLabel"
          AnchorPane.topAnchor="40" AnchorPane.leftAnchor="10"/>
 
-  <!--Output Label -->
+  <!--Output Label-->
   <Label fx:id="outputLabel" text="0"
-         AnchorPane.topAnchor="90" AnchorPane.leftAnchor="10"
+         AnchorPane.topAnchor="90" AnchorPane.leftAnchor="10"/>
+
+  <!--Calculator Grid Buttons-->
+  <GridPane AnchorPane.topAnchor="200" AnchorPane.leftAnchor="7">
+    <!--Row 6-->
+
+
+  </GridPane>
 </AnchorPane>
