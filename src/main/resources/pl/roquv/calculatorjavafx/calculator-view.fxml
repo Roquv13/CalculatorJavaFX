@@ -20,7 +20,10 @@
   <!--Calculator Grid Buttons-->
   <GridPane AnchorPane.topAnchor="200" AnchorPane.leftAnchor="7">
     <!--Row 6-->
-
+    <Button text="\%" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+    <Button text="CE" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+    <Button text="C" GridPane.rowIndex="0" GridPane.columnIndex="2" />
+    <Button text="⬅" GridPane.rowIndex="0" GridPane.columnIndex="3" />
 
   </GridPane>
 </AnchorPane>
