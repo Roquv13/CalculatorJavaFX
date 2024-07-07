@@ -50,10 +50,10 @@
     <Button text="+" GridPane.rowIndex="4" GridPane.columnIndex="3" />
 
     <!--Row 5-->
-    <Button text="+/=" GridPane.rowIndex="4" GridPane.columnIndex="0" />
-    <Button text="0" GridPane.rowIndex="4" GridPane.columnIndex="1" />
-    <Button text="." GridPane.rowIndex="4" GridPane.columnIndex="2" />
-    <Button text="=" GridPane.rowIndex="4" GridPane.columnIndex="3" />
+    <Button text="+/=" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+    <Button text="0" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+    <Button text="." GridPane.rowIndex="5" GridPane.columnIndex="2" />
+    <Button text="=" GridPane.rowIndex="5" GridPane.columnIndex="3" />
 
   </GridPane>
 </AnchorPane>
