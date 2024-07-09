@@ -14,11 +14,11 @@
     <URL value="@style.css"/>
   </stylesheets>
   <!--Calculation Sequence Label-->
-  <Label fx:id="calculationSequenceLabel"
+  <Label fx:id="calculationSequenceLabel" styleClass="calculation-sequence-label"
          AnchorPane.topAnchor="40" AnchorPane.leftAnchor="10"/>
 
   <!--Output Label-->
-  <Label fx:id="outputLabel" text="0"
+  <Label fx:id="outputLabel" text="0" styleClass="output-label"
          AnchorPane.topAnchor="90" AnchorPane.leftAnchor="10"/>
 
   <!--Calculator Grid Buttons-->

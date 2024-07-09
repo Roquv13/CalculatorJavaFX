@@ -5,3 +5,12 @@
 .root{
     -fx-background-color: #000000;
 }
+
+/* label styles */
+.calculation-sequence-label{
+    -fx-background-color: #ff0000;
+}
+
+.output-label{
+    -fx-background-color: #ff0000;
+}
