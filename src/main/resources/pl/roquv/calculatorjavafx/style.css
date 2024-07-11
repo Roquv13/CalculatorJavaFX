@@ -11,6 +11,7 @@
     -fx-pref-width: 18em;
     -fx-alignment: center-right;
     -fx-font-size: 2em;
+    -fx-background-radius: 0.3em;
     -fx-padding: 0.15em;
     -fx-background-color: #ff0000;
 }
@@ -19,10 +20,16 @@
     -fx-pref-width: 7.20em;
     -fx-alignment: center-right;
     -fx-font-size: 5em;
+    -fx-background-radius: 0.15em;
+    -fx-padding: 0.15em 0.15em 0 0;
     -fx-background-color: #ff0000;
 }
 
 /* buttons styles */
 .button{
-    -fx-background-color: #ffff00;
+    -fx-min-width: 4.52em;
+    -fx-min-height: 2.60em;
+    -fx-font-size: 2em;
+    -fx-background-radius: 0.30em;
+    -fx-border-color: #000000FF;
 }
