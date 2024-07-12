@@ -24,40 +24,64 @@
   <!--Calculator Grid Buttons-->
   <GridPane AnchorPane.topAnchor="200" AnchorPane.leftAnchor="7">
     <!--Row 0-->
-    <Button text="\%" GridPane.rowIndex="0" GridPane.columnIndex="0" />
-    <Button text="CE" GridPane.rowIndex="0" GridPane.columnIndex="1" />
-    <Button text="C" GridPane.rowIndex="0" GridPane.columnIndex="2" />
-    <Button text="⬅" GridPane.rowIndex="0" GridPane.columnIndex="3" />
+    <Button text="\%" GridPane.rowIndex="0" GridPane.columnIndex="0"
+            styleClass="button-row-0-primary-color"/>
+    <Button text="CE" GridPane.rowIndex="0" GridPane.columnIndex="1"
+            styleClass="button-row-0-primary-color"/>
+    <Button text="C" GridPane.rowIndex="0" GridPane.columnIndex="2"
+            styleClass="button-row-0-primary-color"/>
+    <Button text="⬅" GridPane.rowIndex="0" GridPane.columnIndex="3"
+            styleClass="button-row-0-primary-color"/>
 
     <!--Row 1-->
-    <Button text="1/x" GridPane.rowIndex="1" GridPane.columnIndex="0" />
-    <Button text="x^2" GridPane.rowIndex="1" GridPane.columnIndex="1" />
-    <Button text="√a" GridPane.rowIndex="1" GridPane.columnIndex="2" />
-    <Button text="/" GridPane.rowIndex="1" GridPane.columnIndex="3" />
+    <Button text="1/x" GridPane.rowIndex="1" GridPane.columnIndex="0"
+            styleClass="button-row-1-primary-color"/>
+    <Button text="x^2" GridPane.rowIndex="1" GridPane.columnIndex="1"
+            styleClass="button-row-1-primary-color"/>
+    <Button text="√a" GridPane.rowIndex="1" GridPane.columnIndex="2"
+            styleClass="button-row-1-primary-color"/>
+    <Button text="/" GridPane.rowIndex="1" GridPane.columnIndex="3"
+            styleClass="button-row-1-primary-color"/>
 
     <!--Row 2-->
-    <Button text="1" GridPane.rowIndex="2" GridPane.columnIndex="0" />
-    <Button text="2" GridPane.rowIndex="2" GridPane.columnIndex="1" />
-    <Button text="3" GridPane.rowIndex="2" GridPane.columnIndex="2" />
-    <Button text="*" GridPane.rowIndex="2" GridPane.columnIndex="3" />
+    <Button text="1" GridPane.rowIndex="2" GridPane.columnIndex="0"
+            styleClass="button-row-2-primary-color"/>
+    <Button text="2" GridPane.rowIndex="2" GridPane.columnIndex="1"
+            styleClass="button-row-2-primary-color"/>
+    <Button text="3" GridPane.rowIndex="2" GridPane.columnIndex="2"
+            styleClass="button-row-2-primary-color"/>
+    <Button text="*" GridPane.rowIndex="2" GridPane.columnIndex="3"
+            styleClass="button-row-2-primary-color"/>
 
     <!--Row 3-->
-    <Button text="4" GridPane.rowIndex="3" GridPane.columnIndex="0" />
-    <Button text="5" GridPane.rowIndex="3" GridPane.columnIndex="1" />
-    <Button text="6" GridPane.rowIndex="3" GridPane.columnIndex="2" />
-    <Button text="-" GridPane.rowIndex="3" GridPane.columnIndex="3" />
+    <Button text="4" GridPane.rowIndex="3" GridPane.columnIndex="0"
+            styleClass="button-row-3-primary-color"/>
+    <Button text="5" GridPane.rowIndex="3" GridPane.columnIndex="1"
+            styleClass="button-row-3-primary-color"/>
+    <Button text="6" GridPane.rowIndex="3" GridPane.columnIndex="2"
+            styleClass="button-row-3-primary-color"/>
+    <Button text="-" GridPane.rowIndex="3" GridPane.columnIndex="3"
+            styleClass="button-row-3-primary-color"/>
 
     <!--Row 4-->
-    <Button text="7" GridPane.rowIndex="4" GridPane.columnIndex="0" />
-    <Button text="8" GridPane.rowIndex="4" GridPane.columnIndex="1" />
-    <Button text="9" GridPane.rowIndex="4" GridPane.columnIndex="2" />
-    <Button text="+" GridPane.rowIndex="4" GridPane.columnIndex="3" />
+    <Button text="7" GridPane.rowIndex="4" GridPane.columnIndex="0"
+            styleClass="button-row-4-primary-color"/>
+    <Button text="8" GridPane.rowIndex="4" GridPane.columnIndex="1"
+            styleClass="button-row-4-primary-color"/>
+    <Button text="9" GridPane.rowIndex="4" GridPane.columnIndex="2"
+            styleClass="button-row-4-primary-color"/>
+    <Button text="+" GridPane.rowIndex="4" GridPane.columnIndex="3"
+            styleClass="button-row-4-primary-color"/>
 
     <!--Row 5-->
-    <Button text="+/=" GridPane.rowIndex="5" GridPane.columnIndex="0" />
-    <Button text="0" GridPane.rowIndex="5" GridPane.columnIndex="1" />
-    <Button text="." GridPane.rowIndex="5" GridPane.columnIndex="2" />
-    <Button text="=" GridPane.rowIndex="5" GridPane.columnIndex="3" />
+    <Button text="+/=" GridPane.rowIndex="5" GridPane.columnIndex="0"
+            styleClass="button-row-5-primary-color"/>
+    <Button text="0" GridPane.rowIndex="5" GridPane.columnIndex="1"
+            styleClass="button-row-5-primary-color"/>
+    <Button text="." GridPane.rowIndex="5" GridPane.columnIndex="2"
+            styleClass="button-row-5-primary-color"/>
+    <Button text="=" GridPane.rowIndex="5" GridPane.columnIndex="3"
+            styleClass="button-row-5-primary-color"/>
 
   </GridPane>
 </AnchorPane>
