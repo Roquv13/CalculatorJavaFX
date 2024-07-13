@@ -33,3 +33,11 @@
     -fx-background-radius: 0.30em;
     -fx-border-color: #000000FF;
 }
+
+.button:hover{
+    -fx-opacity: 0.90;
+}
+
+.button.pressed{
+    -fx-opacity: 0.5;
+}
