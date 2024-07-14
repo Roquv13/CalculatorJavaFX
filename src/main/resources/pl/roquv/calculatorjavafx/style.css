@@ -41,3 +41,52 @@
 .button.pressed{
     -fx-opacity: 0.5;
 }
+
+/* row colored buttons */
+.button-row-0-primary-color{
+    -fx-background-color: #14213D;
+}
+
+.button-row-0-secondary-color{
+    -fx-background-color: #FCA311;
+}
+
+.button-row-1-primary-color{
+    -fx-background-color: #14213D;
+}
+
+.button-row-1-secondary-color{
+    -fx-background-color: #FCA311;
+}
+
+.button-row-2-primary-color{
+    -fx-background-color: #14213D;
+}
+
+.button-row-2-secondary-color{
+    -fx-background-color: #FCA311;
+}
+
+.button-row-3-primary-color{
+    -fx-background-color: #14213D;
+}
+
+.button-row-3-secondary-color{
+    -fx-background-color: #FCA311;
+}
+
+.button-row-4-primary-color{
+    -fx-background-color: #14213D;
+}
+
+.button-row-4-secondary-color{
+    -fx-background-color: #FCA311;
+}
+
+.button-row-5-primary-color{
+    -fx-background-color: #14213D;
+}
+
+.button-row-5-secondary-color{
+    -fx-background-color: #FCA311;
+}

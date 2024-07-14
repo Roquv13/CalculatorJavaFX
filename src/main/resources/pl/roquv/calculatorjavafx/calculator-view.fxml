@@ -31,7 +31,7 @@
     <Button text="C" GridPane.rowIndex="0" GridPane.columnIndex="2"
             styleClass="button-row-0-primary-color"/>
     <Button text="⬅" GridPane.rowIndex="0" GridPane.columnIndex="3"
-            styleClass="button-row-0-primary-color"/>
+            styleClass="button-row-0-secondary-color"/>
 
     <!--Row 1-->
     <Button text="1/x" GridPane.rowIndex="1" GridPane.columnIndex="0"
@@ -41,7 +41,7 @@
     <Button text="√a" GridPane.rowIndex="1" GridPane.columnIndex="2"
             styleClass="button-row-1-primary-color"/>
     <Button text="/" GridPane.rowIndex="1" GridPane.columnIndex="3"
-            styleClass="button-row-1-primary-color"/>
+            styleClass="button-row-1-secondary-color"/>
 
     <!--Row 2-->
     <Button text="1" GridPane.rowIndex="2" GridPane.columnIndex="0"
@@ -51,7 +51,7 @@
     <Button text="3" GridPane.rowIndex="2" GridPane.columnIndex="2"
             styleClass="button-row-2-primary-color"/>
     <Button text="*" GridPane.rowIndex="2" GridPane.columnIndex="3"
-            styleClass="button-row-2-primary-color"/>
+            styleClass="button-row-2-secondary-color"/>
 
     <!--Row 3-->
     <Button text="4" GridPane.rowIndex="3" GridPane.columnIndex="0"
@@ -61,7 +61,7 @@
     <Button text="6" GridPane.rowIndex="3" GridPane.columnIndex="2"
             styleClass="button-row-3-primary-color"/>
     <Button text="-" GridPane.rowIndex="3" GridPane.columnIndex="3"
-            styleClass="button-row-3-primary-color"/>
+            styleClass="button-row-3-secondary-color"/>
 
     <!--Row 4-->
     <Button text="7" GridPane.rowIndex="4" GridPane.columnIndex="0"
@@ -71,7 +71,7 @@
     <Button text="9" GridPane.rowIndex="4" GridPane.columnIndex="2"
             styleClass="button-row-4-primary-color"/>
     <Button text="+" GridPane.rowIndex="4" GridPane.columnIndex="3"
-            styleClass="button-row-4-primary-color"/>
+            styleClass="button-row-4-secondary-color"/>
 
     <!--Row 5-->
     <Button text="+/=" GridPane.rowIndex="5" GridPane.columnIndex="0"
@@ -81,7 +81,7 @@
     <Button text="." GridPane.rowIndex="5" GridPane.columnIndex="2"
             styleClass="button-row-5-primary-color"/>
     <Button text="=" GridPane.rowIndex="5" GridPane.columnIndex="3"
-            styleClass="button-row-5-primary-color"/>
+            styleClass="button-row-5-secondary-color"/>
 
   </GridPane>
 </AnchorPane>
