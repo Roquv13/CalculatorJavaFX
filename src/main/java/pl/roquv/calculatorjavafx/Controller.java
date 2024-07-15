@@ -5,10 +5,15 @@ import javafx.scene.control.Label;
 
 public class Controller {
     @FXML
-    private Label welcomeText;
+    private Label outputLabel;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+    private Label calculationSequenceLabel;
+
+    // Flags to handle logic
+    private boolean pressedBinaryOperator, pressedEqual, pressedUnary;
+    private boolean storedNum1, storedNum2;
+
+    private double num1, num2;
+    private String binaryOperator;
 }
