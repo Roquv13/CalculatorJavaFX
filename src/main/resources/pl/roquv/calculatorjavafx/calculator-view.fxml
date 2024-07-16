@@ -14,7 +14,7 @@
     <URL value="@style.css"/>
   </stylesheets>
   <!--Calculation Sequence Label-->
-  <Label fx:id="onAction="#handleNumberButtonClick" " styleClass="calculation-sequence-label"
+  <Label fx:id="calculationSequenceLabel" styleClass="calculation-sequence-label"
          AnchorPane.topAnchor="40" AnchorPane.leftAnchor="10"/>
 
   <!--Output Label-->
