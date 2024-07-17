@@ -33,9 +33,15 @@ public class Controller {
 
     private boolean shouldReplaceZero(String outputLabelText) {
         // replace 0 when we are about to enter value for num2
+        // replace 0 after pressing equal, unary button or if current value is 0
         return (storedNum1 && pressedBinaryOperator && !storedNum2)
                 || pressedEqual
                 || pressedUnary
                 || Double.parseDouble(outputLabelText) == 0;
+    }
+
+    private boolean shouldStoreNum2() {
+        // store num2 after storing num1 and pressing operator
+        return !storedNum2 &&storedNum1 && pressedBinaryOperator;
     }
 }
