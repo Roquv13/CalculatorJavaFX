@@ -26,6 +26,10 @@ public class Controller {
 
         if (shouldReplaceZero(outputLabelText)) {
             outputLabel.setText(numberInput);
+
+            if (shouldStoreNum2()) {
+                storedNum2 = true;
+            }
         } else {
             outputLabel.setText(outputLabelText + numberInput);
         }
