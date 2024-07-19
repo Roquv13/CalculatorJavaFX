@@ -48,4 +48,13 @@ public class Controller {
         // store num2 after storing num1 and pressing operator
         return !storedNum2 &&storedNum1 && pressedBinaryOperator;
     }
+
+    public void handleUnaryButtonClick(ActionEvent event) {
+        Button button = (Button) event.getSource();
+        String unaryOperator = button.getText();
+
+        // Store num1
+        num1 = Double.parseDouble(outputLabel.getText());
+        storedNum1 = true;
+    }
 }
