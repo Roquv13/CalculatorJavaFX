@@ -56,5 +56,10 @@ public class Controller {
         // Store num1
         num1 = Double.parseDouble(outputLabel.getText());
         storedNum1 = true;
+
+        // Perform unary calculation
+        switch (unaryOperator) {
+
+        }
     }
 }
