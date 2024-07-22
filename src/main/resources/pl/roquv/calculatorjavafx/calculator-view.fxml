@@ -38,7 +38,7 @@
             styleClass="button-row-1-primary-color"/>
     <Button text="x^2" onAction="#handleUnaryButtonClick" GridPane.rowIndex="1" GridPane.columnIndex="1"
             styleClass="button-row-1-primary-color"/>
-    <Button text="√a" onAction="#handleUnaryButtonClick" GridPane.rowIndex="1" GridPane.columnIndex="2"
+    <Button text="√x" onAction="#handleUnaryButtonClick" GridPane.rowIndex="1" GridPane.columnIndex="2"
             styleClass="button-row-1-primary-color"/>
     <Button text="/" onAction="#handleUnaryButtonClick" GridPane.rowIndex="1" GridPane.columnIndex="3"
             styleClass="button-row-1-secondary-color"/>
@@ -74,7 +74,7 @@
             styleClass="button-row-4-secondary-color"/>
 
     <!--Row 5-->
-    <Button text="+/=" onAction="#handleUnaryButtonClick" GridPane.rowIndex="5" GridPane.columnIndex="0"
+    <Button text="+/-" onAction="#handleUnaryButtonClick" GridPane.rowIndex="5" GridPane.columnIndex="0"
             styleClass="button-row-5-primary-color"/>
     <Button text="0" onAction="#handleNumberButtonClick" GridPane.rowIndex="5" GridPane.columnIndex="1"
             styleClass="button-row-5-primary-color"/>
