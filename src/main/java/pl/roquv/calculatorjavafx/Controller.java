@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import pl.roquv.constants.CommonConstants;
 
 public class Controller {
     @FXML
@@ -59,7 +60,25 @@ public class Controller {
 
         // Perform unary calculation
         switch (unaryOperator) {
-
+            case CommonConstants.OPERATOR_PERCENT -> {
+                num1 /= 100;
+                calculationSequenceLabel.setText(Double.toString(num1));
+            }
+            case CommonConstants.OPERATOR_RECIPROCAL -> {
+                num1 /= 0.5;
+                calculationSequenceLabel.setText("1/" + num1);
+            }
+            case CommonConstants.OPERATOR_SQUARE -> {
+                num1 = num1 * num1;
+                calculationSequenceLabel.setText("sqr(" + num1 + ")");
+            }
+            case CommonConstants.OPERATOR_SQRT -> {
+                num1 = Math.sqrt(num1)
+                calculationSequenceLabel.setText("sqrt(" + num1 + ")");
+            }
+            case CommonConstants.OPERATOR_NEGATE -> {
+                num1 *= -1;
+            }
         }
     }
 }
