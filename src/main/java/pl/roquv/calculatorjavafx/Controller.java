@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import pl.roquv.constants.CommonConstants;
+import pl.roquv.calculatorjavafx.constants.CommonConstants;
 
 public class Controller {
     @FXML
@@ -73,7 +73,7 @@ public class Controller {
                 calculationSequenceLabel.setText("sqr(" + num1 + ")");
             }
             case CommonConstants.OPERATOR_SQRT -> {
-                num1 = Math.sqrt(num1)
+                num1 = Math.sqrt(num1);
                 calculationSequenceLabel.setText("sqrt(" + num1 + ")");
             }
             case CommonConstants.OPERATOR_NEGATE -> {

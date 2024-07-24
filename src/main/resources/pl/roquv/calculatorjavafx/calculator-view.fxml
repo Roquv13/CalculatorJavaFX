@@ -24,7 +24,7 @@
   <!--Calculator Grid Buttons-->
   <GridPane AnchorPane.topAnchor="200" AnchorPane.leftAnchor="7">
     <!--Row 0-->
-    <Button text="%" onAction="#handleUnaryButtonClick" GridPane.rowIndex="0" GridPane.columnIndex="0"
+    <Button text="\%" onAction="#handleUnaryButtonClick" GridPane.rowIndex="0" GridPane.columnIndex="0"
             styleClass="button-row-0-primary-color"/>
     <Button text="CE" GridPane.rowIndex="0" GridPane.columnIndex="1"
             styleClass="button-row-0-primary-color"/>

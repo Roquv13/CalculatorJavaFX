@@ -1,4 +1,4 @@
-package pl.roquv.constants;
+package pl.roquv.calculatorjavafx.constants;
 
 public class CommonConstants {
     // Unary operators
