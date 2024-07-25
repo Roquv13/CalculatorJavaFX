@@ -54,9 +54,7 @@ public class Controller {
         Button button = (Button) event.getSource();
         String unaryOperator = button.getText();
 
-        // Store num1
         num1 = Double.parseDouble(outputLabel.getText());
-        storedNum1 = true;
 
         // Perform unary calculation
         switch (unaryOperator) {
@@ -80,5 +78,14 @@ public class Controller {
                 num1 *= -1;
             }
         }
+
+        // Output to display
+        outputLabel.setText(Double.toString(num1));
+
+        // Update flags
+        pressedUnary = true;
+        storedNum1 = true;
+        pressedEqual = false;
+        pressedBinaryOperator = false;
     }
 }
