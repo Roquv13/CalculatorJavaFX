@@ -44,11 +44,11 @@
             styleClass="button-row-1-secondary-color"/>
 
     <!--Row 2-->
-    <Button text="1" onAction="#handleNumberButtonClick" GridPane.rowIndex="2" GridPane.columnIndex="0"
+    <Button text="7" onAction="#handleNumberButtonClick" GridPane.rowIndex="2" GridPane.columnIndex="0"
             styleClass="button-row-2-primary-color"/>
-    <Button text="2" onAction="#handleNumberButtonClick" GridPane.rowIndex="2" GridPane.columnIndex="1"
+    <Button text="8" onAction="#handleNumberButtonClick" GridPane.rowIndex="2" GridPane.columnIndex="1"
             styleClass="button-row-2-primary-color"/>
-    <Button text="3" onAction="#handleNumberButtonClick" GridPane.rowIndex="2" GridPane.columnIndex="2"
+    <Button text="9" onAction="#handleNumberButtonClick" GridPane.rowIndex="2" GridPane.columnIndex="2"
             styleClass="button-row-2-primary-color"/>
     <Button text="*" GridPane.rowIndex="2" GridPane.columnIndex="3"
             styleClass="button-row-2-secondary-color"/>
@@ -64,11 +64,11 @@
             styleClass="button-row-3-secondary-color"/>
 
     <!--Row 4-->
-    <Button text="7" onAction="#handleNumberButtonClick" GridPane.rowIndex="4" GridPane.columnIndex="0"
+    <Button text="1" onAction="#handleNumberButtonClick" GridPane.rowIndex="4" GridPane.columnIndex="0"
             styleClass="button-row-4-primary-color"/>
-    <Button text="8" onAction="#handleNumberButtonClick" GridPane.rowIndex="4" GridPane.columnIndex="1"
+    <Button text="2" onAction="#handleNumberButtonClick" GridPane.rowIndex="4" GridPane.columnIndex="1"
             styleClass="button-row-4-primary-color"/>
-    <Button text="9" onAction="#handleNumberButtonClick" GridPane.rowIndex="4" GridPane.columnIndex="2"
+    <Button text="3" onAction="#handleNumberButtonClick" GridPane.rowIndex="4" GridPane.columnIndex="2"
             styleClass="button-row-4-primary-color"/>
     <Button text="+" GridPane.rowIndex="4" GridPane.columnIndex="3"
             styleClass="button-row-4-secondary-color"/>
