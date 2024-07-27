@@ -34,6 +34,9 @@ public class Controller {
         } else {
             outputLabel.setText(outputLabelText + numberInput);
         }
+
+        // Update flags
+        pressedUnary = false;
     }
 
     private boolean shouldReplaceZero(String outputLabelText) {
@@ -63,7 +66,7 @@ public class Controller {
                 calculationSequenceLabel.setText(Double.toString(num1));
             }
             case CommonConstants.OPERATOR_RECIPROCAL -> {
-                num1 /= 0.5;
+                num1 = 1/num1;
                 calculationSequenceLabel.setText("1/" + num1);
             }
             case CommonConstants.OPERATOR_SQUARE -> {
