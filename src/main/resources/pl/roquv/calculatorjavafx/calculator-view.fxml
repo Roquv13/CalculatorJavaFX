@@ -40,7 +40,7 @@
             styleClass="button-row-1-primary-color"/>
     <Button text="√x" onAction="#handleUnaryButtonClick" GridPane.rowIndex="1" GridPane.columnIndex="2"
             styleClass="button-row-1-primary-color"/>
-    <Button text="/" GridPane.rowIndex="1" GridPane.columnIndex="3"
+    <Button text="/" onAction="#handleBinaryButtonClick" GridPane.rowIndex="1" GridPane.columnIndex="3"
             styleClass="button-row-1-secondary-color"/>
 
     <!--Row 2-->
@@ -50,7 +50,7 @@
             styleClass="button-row-2-primary-color"/>
     <Button text="9" onAction="#handleNumberButtonClick" GridPane.rowIndex="2" GridPane.columnIndex="2"
             styleClass="button-row-2-primary-color"/>
-    <Button text="*" GridPane.rowIndex="2" GridPane.columnIndex="3"
+    <Button text="*" onAction="#handleBinaryButtonClick" GridPane.rowIndex="2" GridPane.columnIndex="3"
             styleClass="button-row-2-secondary-color"/>
 
     <!--Row 3-->
@@ -60,7 +60,7 @@
             styleClass="button-row-3-primary-color"/>
     <Button text="6" onAction="#handleNumberButtonClick" GridPane.rowIndex="3" GridPane.columnIndex="2"
             styleClass="button-row-3-primary-color"/>
-    <Button text="-" GridPane.rowIndex="3" GridPane.columnIndex="3"
+    <Button text="-" onAction="#handleBinaryButtonClick" GridPane.rowIndex="3" GridPane.columnIndex="3"
             styleClass="button-row-3-secondary-color"/>
 
     <!--Row 4-->
@@ -70,7 +70,7 @@
             styleClass="button-row-4-primary-color"/>
     <Button text="3" onAction="#handleNumberButtonClick" GridPane.rowIndex="4" GridPane.columnIndex="2"
             styleClass="button-row-4-primary-color"/>
-    <Button text="+" GridPane.rowIndex="4" GridPane.columnIndex="3"
+    <Button text="+" onAction="#handleBinaryButtonClick" GridPane.rowIndex="4" GridPane.columnIndex="3"
             styleClass="button-row-4-secondary-color"/>
 
     <!--Row 5-->
