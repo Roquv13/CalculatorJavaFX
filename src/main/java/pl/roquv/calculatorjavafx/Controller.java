@@ -91,4 +91,9 @@ public class Controller {
         pressedEqual = false;
         pressedBinaryOperator = false;
     }
+
+    public void handleBinaryButtonClick(ActionEvent event){
+        Button button = (Button) event.getSource();
+        String binaryOperator = button.getText();
+    }
 }
