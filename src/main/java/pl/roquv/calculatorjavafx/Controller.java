@@ -95,5 +95,9 @@ public class Controller {
     public void handleBinaryButtonClick(ActionEvent event){
         Button button = (Button) event.getSource();
         String binaryOperator = button.getText();
+
+        // Perform binary calculation
+        switch (binaryOperator) {
+        }
     }
 }
