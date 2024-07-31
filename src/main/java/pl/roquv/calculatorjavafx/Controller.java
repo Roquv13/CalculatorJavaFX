@@ -96,6 +96,12 @@ public class Controller {
         Button button = (Button) event.getSource();
         String binaryOperator = button.getText();
 
+        // Store num1
+        if (!storedNum1) {
+            num1 = Double.parseDouble(outputLabel.getText());
+            storedNum1 = true;
+        }
+
         // Perform binary calculation
         switch (binaryOperator) {
         }
