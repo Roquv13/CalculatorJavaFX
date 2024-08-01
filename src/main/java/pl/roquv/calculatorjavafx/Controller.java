@@ -102,8 +102,19 @@ public class Controller {
             storedNum1 = true;
         }
 
-        // Perform binary calculation
-        switch (binaryOperator) {
+        if (storedNum1) {
+            updateBinaryOperator(binaryOperator);
         }
+
+        // Perform binary calculation
+//        switch (binaryOperator) {
+//        }
+    }
+
+    private void updateBinaryOperator(String binaryOperator) {
+        this.binaryOperator = binaryOperator;
+
+        // Update Calculation Sequence
+        calculationSequenceLabel.setText(num1 + " " + this.binaryOperator);
     }
 }
