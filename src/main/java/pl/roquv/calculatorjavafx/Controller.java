@@ -106,6 +106,11 @@ public class Controller {
             updateBinaryOperator(binaryOperator);
         }
 
+        // Update flags
+        pressedBinaryOperator = true;
+        pressedUnary = false;
+        pressedEqual = false;
+
         // Perform binary calculation
 //        switch (binaryOperator) {
 //        }
