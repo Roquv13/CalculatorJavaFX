@@ -116,6 +116,12 @@ public class Controller {
 //        }
     }
 
+    public void handleDotButtonClick() {
+        if(!outputLabel.getText().contains(".")) {
+            outputLabel.setText(outputLabel.getText() + ".");
+        }
+    }
+
     private void updateBinaryOperator(String binaryOperator) {
         this.binaryOperator = binaryOperator;
 

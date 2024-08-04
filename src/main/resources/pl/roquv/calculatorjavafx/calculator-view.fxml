@@ -78,7 +78,7 @@
             styleClass="button-row-5-primary-color"/>
     <Button text="0" onAction="#handleNumberButtonClick" GridPane.rowIndex="5" GridPane.columnIndex="1"
             styleClass="button-row-5-primary-color"/>
-    <Button text="." GridPane.rowIndex="5" GridPane.columnIndex="2"
+    <Button text="." onAction="#handleDotButtonClick" GridPane.rowIndex="5" GridPane.columnIndex="2"
             styleClass="button-row-5-primary-color"/>
     <Button text="=" GridPane.rowIndex="5" GridPane.columnIndex="3"
             styleClass="button-row-5-secondary-color"/>
