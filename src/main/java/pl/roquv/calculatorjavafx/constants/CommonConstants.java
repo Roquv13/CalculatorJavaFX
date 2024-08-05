@@ -7,4 +7,9 @@ public class CommonConstants {
     public static final String OPERATOR_SQUARE = "x^2";
     public static final String OPERATOR_SQRT = "√x";
     public static final String OPERATOR_NEGATE = "+/-";
+
+    // Other buttons
+    public static final String CLEAR_ENTRY_BUTTON = "CE";
+    public static final String CLEAR_BUTTON = "C";
+    public static final String DEL_BUTTON = "⬅";
 }

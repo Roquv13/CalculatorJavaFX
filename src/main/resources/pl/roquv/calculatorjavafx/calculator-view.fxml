@@ -26,11 +26,11 @@
     <!--Row 0-->
     <Button text="\%" onAction="#handleUnaryButtonClick" GridPane.rowIndex="0" GridPane.columnIndex="0"
             styleClass="button-row-0-primary-color"/>
-    <Button text="CE" GridPane.rowIndex="0" GridPane.columnIndex="1"
+    <Button text="CE" onAction="#handleOtherButtonClick" GridPane.rowIndex="0" GridPane.columnIndex="1"
             styleClass="button-row-0-primary-color"/>
-    <Button text="C" GridPane.rowIndex="0" GridPane.columnIndex="2"
+    <Button text="C" onAction="#handleOtherButtonClick" GridPane.rowIndex="0" GridPane.columnIndex="2"
             styleClass="button-row-0-primary-color"/>
-    <Button text="⬅" GridPane.rowIndex="0" GridPane.columnIndex="3"
+    <Button text="⬅" onAction="#handleOtherButtonClick" GridPane.rowIndex="0" GridPane.columnIndex="3"
             styleClass="button-row-0-secondary-color"/>
 
     <!--Row 1-->
@@ -78,7 +78,7 @@
             styleClass="button-row-5-primary-color"/>
     <Button text="0" onAction="#handleNumberButtonClick" GridPane.rowIndex="5" GridPane.columnIndex="1"
             styleClass="button-row-5-primary-color"/>
-    <Button text="." onAction="#handleDotButtonClick" GridPane.rowIndex="5" GridPane.columnIndex="2"
+    <Button text="." onAction="#handleDotButtonClick"  GridPane.rowIndex="5" GridPane.columnIndex="2"
             styleClass="button-row-5-primary-color"/>
     <Button text="=" GridPane.rowIndex="5" GridPane.columnIndex="3"
             styleClass="button-row-5-secondary-color"/>

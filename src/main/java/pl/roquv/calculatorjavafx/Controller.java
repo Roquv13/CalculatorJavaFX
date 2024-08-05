@@ -116,16 +116,51 @@ public class Controller {
 //        }
     }
 
+    private void updateBinaryOperator(String binaryOperator) {
+        this.binaryOperator = binaryOperator;
+
+        // Update Calculation Sequence
+        calculationSequenceLabel.setText(num1 + " " + this.binaryOperator);
+    }
+
     public void handleDotButtonClick() {
         if(!outputLabel.getText().contains(".")) {
             outputLabel.setText(outputLabel.getText() + ".");
         }
     }
 
-    private void updateBinaryOperator(String binaryOperator) {
-        this.binaryOperator = binaryOperator;
+    public void handleOtherButtonClick(ActionEvent event) {
+        Button button = (Button) event.getSource();
+        String otherButton = button.getText();
 
-        // Update Calculation Sequence
-        calculationSequenceLabel.setText(num1 + " " + this.binaryOperator);
+        switch (otherButton) {
+            // Reset current input
+            case CommonConstants.CLEAR_ENTRY_BUTTON -> outputLabel.setText("0");
+
+            // Reset all
+            case CommonConstants.CLEAR_BUTTON -> reset();
+
+            // Deletes number
+            case CommonConstants.DEL_BUTTON -> {
+                if (Double.parseDouble(outputLabel.getText()) != 0) {
+                    outputLabel.setText(outputLabel.getText().substring(0,
+                            outputLabel.getText().length() - 1));
+                }
+
+                if (outputLabel.getText().isEmpty()) {
+                    outputLabel.setText("0");
+                }
+            }
+        }
+    }
+
+    private void reset() {
+        outputLabel.setText("0");
+        calculationSequenceLabel.setText("");
+        storedNum1 = false;
+        storedNum2 = false;
+        pressedBinaryOperator = false;
+        pressedEqual = false;
+        pressedUnary = false;
     }
 }
