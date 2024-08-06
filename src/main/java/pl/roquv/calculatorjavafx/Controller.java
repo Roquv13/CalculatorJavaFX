@@ -163,4 +163,63 @@ public class Controller {
         pressedEqual = false;
         pressedUnary = false;
     }
+
+    public void handleEqualButtonClick() {
+        if (shouldStoreNum2()) {
+            num2 = num1;
+            storedNum2 = true;
+        }
+
+        pressedEqual = true;
+        pressedBinaryOperator = false;
+        pressedUnary = false;
+
+        if (shouldCalculate()) {
+            calculate();
+        }
+    }
+
+    private boolean shouldCalculate() {
+        return storedNum1 && storedNum2;
+    }
+
+    private void calculate() {
+        // Store num2
+        num2 = Double.parseDouble(outputLabel.getText());
+        storedNum2 = true;
+
+        // Store result in num1
+        num1 = performBinaryCalculation();
+        outputLabel.setText(Double.toString(num1));
+    }
+
+    private double performBinaryCalculation() {
+        double result = 0;
+
+        switch (binaryOperator) {
+            case CommonConstants.OPERATOR_ADD -> {
+                result = num1 + num2;
+            }
+            case CommonConstants.OPERATOR_SUBTRACT -> {
+                result = num1 - num2;
+            }
+            case CommonConstants.OPERATOR_MULTIPLY -> {
+                result = num1 * num2;
+            }
+            case CommonConstants.OPERATOR_DIVIDE -> {
+                if (num2 == 0) {
+                    outputLabel.setText("Error: Cannot divide by zero");
+                } else {
+                    result = num1 / num2;
+                }
+            }
+        }
+
+        calculationSequenceLabel.setText(num1 + " " + binaryOperator + num2 + " = ");
+
+        num2 = 0;
+        storedNum2 = false;
+
+        return result;
+    }
 }
