@@ -31,12 +31,12 @@ public class Controller {
             if (shouldStoreNum2()) {
                 storedNum2 = true;
             }
+
+            pressedEqual = false;
+            pressedUnary = false;
         } else {
             outputLabel.setText(outputLabelText + numberInput);
         }
-
-        // Update flags
-        pressedUnary = false;
     }
 
     private boolean shouldReplaceZero(String outputLabelText) {
@@ -57,37 +57,44 @@ public class Controller {
         Button button = (Button) event.getSource();
         String unaryOperator = button.getText();
 
-        num1 = Double.parseDouble(outputLabel.getText());
+        double result = Double.parseDouble(outputLabel.getText());
 
         // Perform unary calculation
         switch (unaryOperator) {
             case CommonConstants.OPERATOR_PERCENT -> {
-                num1 /= 100;
-                calculationSequenceLabel.setText(Double.toString(num1));
+                result /= 100;
+                calculationSequenceLabel.setText(Double.toString(result));
             }
             case CommonConstants.OPERATOR_RECIPROCAL -> {
-                num1 = 1/num1;
-                calculationSequenceLabel.setText("1/" + num1);
+                result = 1/result;
+                calculationSequenceLabel.setText("1/" + result);
             }
             case CommonConstants.OPERATOR_SQUARE -> {
-                num1 = num1 * num1;
-                calculationSequenceLabel.setText("sqr(" + num1 + ")");
+                result = result * result;
+                calculationSequenceLabel.setText("sqr(" + result + ")");
             }
             case CommonConstants.OPERATOR_SQRT -> {
-                num1 = Math.sqrt(num1);
-                calculationSequenceLabel.setText("sqrt(" + num1 + ")");
+                result = Math.sqrt(result);
+                calculationSequenceLabel.setText("sqrt(" + result + ")");
             }
             case CommonConstants.OPERATOR_NEGATE -> {
-                num1 *= -1;
+                result *= -1;
             }
         }
 
+        if (!storedNum1) {
+            num1 = result;
+            storedNum1 = true;
+        } else if (shouldStoreNum2()) {
+            num2 = result;
+            storedNum2 = true;
+        }
+
         // Output to display
-        outputLabel.setText(Double.toString(num1));
+        outputLabel.setText(Double.toString(result));
 
         // Update flags
         pressedUnary = true;
-        storedNum1 = true;
         pressedEqual = false;
         pressedBinaryOperator = false;
     }
@@ -170,12 +177,12 @@ public class Controller {
             storedNum2 = true;
         }
 
-        pressedEqual = true;
-        pressedBinaryOperator = false;
-        pressedUnary = false;
-
         if (shouldCalculate()) {
             calculate();
+
+            pressedEqual = true;
+            pressedBinaryOperator = false;
+            pressedUnary = false;
         }
     }
 
@@ -216,6 +223,9 @@ public class Controller {
         }
 
         calculationSequenceLabel.setText(num1 + " " + binaryOperator + num2 + " = ");
+
+        num1 = 0;
+        storedNum1 = false;
 
         num2 = 0;
         storedNum2 = false;
