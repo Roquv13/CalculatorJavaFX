@@ -13,7 +13,8 @@
     -fx-font-size: 2em;
     -fx-background-radius: 0.3em;
     -fx-padding: 0.15em;
-    -fx-background-color: #ff0000;
+    -fx-border-radius: 0.30em;
+    -fx-border-color: #ffffff;
 }
 
 .output-label{
@@ -22,7 +23,8 @@
     -fx-font-size: 5em;
     -fx-background-radius: 0.15em;
     -fx-padding: 0.15em 0.15em 0 0;
-    -fx-background-color: #ff0000;
+    -fx-border-radius: 0.15em;
+    -fx-border-color: #ffffff;
 }
 
 /* buttons styles */
